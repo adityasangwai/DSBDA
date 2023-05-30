@@ -1,0 +1,21 @@
+1.Open terminal form sbin folder in hadoop
+
+2.type: start-dfs.sh
+
+3.type: start-yarn.sh
+
+4.type: jps
+
+5.if you do not see 6 elements, go to bin folder and open terminal there and type: hadoop namenode -format
+  else continue
+
+6.create a new folder in sbin folder by typing: hdfs dfs -mkdir /aditya
+
+7.create a new file in home directory e.g.adityaFile.txt and enter some text into it (touch aditya.txt)
+
+8.type: hadoop fs -put /home/hadoop/adityaFile.txt /aditya (use drag and drop for the path)
+
+9.type: yarn jar /home/hadoop/hadoop-3.3.5/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.5.jar wordcount /aditya/adityaOutput
+
+10.type: hdfs dfs -cat /adityaOutput/part-r-00000
+
